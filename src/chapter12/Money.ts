@@ -1,25 +1,25 @@
 export class Money {
-  protected amount: number;
-  protected currency: string;
+  protected _amount: number;
+  protected _currency: string;
 
   constructor(amount: number, currency: string) {
-    this.amount = amount;
-    this.currency = currency;
+    this._amount = amount;
+    this._currency = currency;
   }
 
   public equals(other: Money) {
-    const isSameAmount = this.amount === other.amount;
-    const isSameCurrency = this.currency === other.currency;
+    const isSameAmount = this._amount === other._amount;
+    const isSameCurrency = this._currency === other._currency;
 
     return isSameAmount && isSameCurrency;
   }
 
   public times(multiplier: number) {
-    return new Money(this.amount * multiplier, this.currency);
+    return new Money(this._amount * multiplier, this._currency);
   }
 
-  public getCurrency(): string {
-    return this.currency;
+  public currency(): string {
+    return this._currency;
   }
 
   public static dollar(amount: number): Money {
