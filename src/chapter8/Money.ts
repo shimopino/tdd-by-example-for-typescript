@@ -1,6 +1,7 @@
 import { Dollar } from './Dollar';
+import { Franc } from './Franc';
 
-export class Money {
+export abstract class Money {
   protected amount: number;
 
   public equals(other: Money) {
@@ -10,7 +11,13 @@ export class Money {
     return isSameAmount && isSameClass;
   }
 
+  public abstract times(multiplier: number): Money;
+
   public static dollar(amount: number): Money {
     return new Dollar(amount);
+  }
+
+  public static franc(amount: number): Money {
+    return new Franc(amount);
   }
 }
