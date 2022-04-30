@@ -9,14 +9,12 @@ describe('多国籍通貨の計算', () => {
   it('金額（通貨単位あたりの額）に数値（通貨単位数）を掛け、金額を得る', () => {
     const five = new Dollar(5);
 
-    const product2 = five.times(2);
-    expect(product2.amount).toBe(10);
+    expect(five.times(2)).toEqual(new Dollar(10));
 
-    const product3 = five.times(3);
-    expect(product3.amount).toBe(15);
+    expect(five.times(3)).toEqual(new Dollar(15));
   });
 
-  it.todo('amountをprivateにする');
+  it.skip('[↑で完了] amountをprivateにする');
 
   it.todo('Dollarの副作用をどのように取り扱うのか？');
 
