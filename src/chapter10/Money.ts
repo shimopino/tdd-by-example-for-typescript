@@ -1,7 +1,7 @@
 import { Dollar } from './Dollar';
 import { Franc } from './Franc';
 
-export abstract class Money {
+export class Money {
   protected amount: number;
   protected currency: string;
 
@@ -12,12 +12,15 @@ export abstract class Money {
 
   public equals(other: Money) {
     const isSameAmount = this.amount === other.amount;
-    const isSameClass = this.constructor.name === other.constructor.name;
+    // const isSameClass = this.constructor.name === other.constructor.name;
+    const isSameCurrency = this.currency === other.currency;
 
-    return isSameAmount && isSameClass;
+    return isSameAmount && isSameCurrency;
   }
 
-  public abstract times(multiplier: number): Money;
+  public times(multiplier: number) {
+    return new Money(this.amount * multiplier, this.currency);
+  }
 
   public getCurrency(): string {
     return this.currency;

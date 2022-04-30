@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import { Franc } from './Franc';
 import { Money } from './Money';
 
 describe.skip('多国籍通貨の計算', () => {
@@ -36,5 +37,9 @@ describe.skip('多国籍通貨の計算', () => {
   it('通過の概念を導入する', () => {
     // expect(Money.dollar(1).getCurrency()).toBe('USD');
     // expect(Money.franc(1).getCurrency()).toBe('CHF');
+  });
+
+  it('異なるクラス間の等価性を検証する', () => {
+    // expect(new Money(10, 'CHF').equals(new Franc(10, 'CHF'))).toBeTruthy();
   });
 });
