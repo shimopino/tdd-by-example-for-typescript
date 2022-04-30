@@ -41,5 +41,13 @@ describe('多国籍通貨の計算', () => {
     expect(reduced).toEqual(Money.dollar(10));
   });
 
+  it('2つのMoneyの合計がSumのインスタンスを返す', () => {
+    const five = Money.dollar(5);
+    const sum = five.plus(five);
+
+    expect(sum.augend).toEqual(five);
+    expect(sum.addend).toEqual(five);
+  });
+
   it.todo('異なる通貨単位での足し算（$5 + 10 CHF = $10）を行う');
 });
