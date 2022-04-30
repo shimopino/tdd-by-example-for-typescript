@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { Dollar } from './Dollar';
 import { Franc } from './Franc';
+import { Money } from './Money';
 
 describe('多国籍通貨の計算', () => {
   it.todo(
@@ -8,7 +9,8 @@ describe('多国籍通貨の計算', () => {
   );
 
   it('金額（通貨単位あたりの額）に数値（通貨単位数）を掛け、金額を得る', () => {
-    const five = new Dollar(5);
+    // const five = new Dollar(5);
+    const five = Money.dollar(5);
 
     expect(five.times(2)).toEqual(new Dollar(10));
 

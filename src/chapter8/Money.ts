@@ -1,3 +1,5 @@
+import { Dollar } from './Dollar';
+
 export class Money {
   protected amount: number;
 
@@ -6,5 +8,9 @@ export class Money {
     const isSameClass = this.constructor.name === other.constructor.name;
 
     return isSameAmount && isSameClass;
+  }
+
+  public static dollar(amount: number): Money {
+    return new Dollar(amount);
   }
 }
