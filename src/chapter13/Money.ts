@@ -25,6 +25,10 @@ export class Money implements Expression {
     return new Sum(this, other);
   }
 
+  public reduce(to: string) {
+    return this;
+  }
+
   public currency(): string {
     return this._currency;
   }
