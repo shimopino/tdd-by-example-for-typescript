@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { Bank } from './Bank';
 import { Money } from './Money';
+import { Sum } from './Sum';
 
 describe('多国籍通貨の計算', () => {
   it.todo(
@@ -47,6 +48,14 @@ describe('多国籍通貨の計算', () => {
 
     expect(sum.augend).toEqual(five);
     expect(sum.addend).toEqual(five);
+  });
+
+  it('足し算の結果にMoneyが返ってくることを確認する', () => {
+    const sum = new Sum(Money.dollar(3), Money.dollar(4));
+    const bank = new Bank();
+    const result = bank.reduce(sum, 'USD');
+
+    expect(result).toEqual(Money.dollar(7));
   });
 
   it.todo('異なる通貨単位での足し算（$5 + 10 CHF = $10）を行う');

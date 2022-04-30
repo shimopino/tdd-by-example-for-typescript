@@ -9,4 +9,10 @@ export class Sum implements Expression {
     this.augend = augend;
     this.addend = addend;
   }
+
+  public reduce(to: string) {
+    // @ts-expect-error Javaとはパッケージの概念が異なるため
+    const amount = this.augend._amount + this.addend._amount;
+    return new Money(amount, to);
+  }
 }

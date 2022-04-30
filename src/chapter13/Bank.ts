@@ -1,8 +1,9 @@
 import { Expression } from './Expression';
-import { Money } from './Money';
+import { Sum } from './Sum';
 
 export class Bank {
   public reduce(source: Expression, to: string) {
-    return Money.dollar(10);
+    const sum = source as Sum;
+    return sum.reduce(to);
   }
 }
