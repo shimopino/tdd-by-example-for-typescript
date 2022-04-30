@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { Money } from './Money';
 
-describe.skip('多国籍通貨の計算', () => {
+describe('多国籍通貨の計算', () => {
   it.todo(
     '異なる通過の2つの金額を足し、通貨間の為替レートに基づいて換算された金額を得る'
   );
