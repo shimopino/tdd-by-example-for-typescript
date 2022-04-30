@@ -46,7 +46,9 @@ describe('多国籍通貨の計算', () => {
     const five = Money.dollar(5);
     const sum = five.plus(five);
 
+    // @ts-expect-error インターフェースの都合
     expect(sum.augend).toEqual(five);
+    // @ts-expect-error インターフェースの都合
     expect(sum.addend).toEqual(five);
   });
 
@@ -65,7 +67,16 @@ describe('多国籍通貨の計算', () => {
     expect(result).toEqual(Money.dollar(1));
   });
 
-  it.todo('異なる通貨単位での足し算（$5 + 10 CHF = $10）を行う');
+  it('異なる通貨単位での足し算（$5 + 10 CHF = $10）を行う', () => {
+    const fiveBucks = Money.dollar(5);
+    const tenFrancs = Money.franc(10);
+    const bank = new Bank();
+    bank.addRate('CHF', 'USD', 2);
+
+    const result = bank.reduce(fiveBucks.plus(tenFrancs), 'USD');
+
+    expect(result).toEqual(Money.dollar(10));
+  });
 
   it('同じ通貨単位の場合は為替レートが 1 になる', () => {
     expect(new Bank().rate('USD', 'USD')).toBe(1);

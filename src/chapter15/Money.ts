@@ -18,12 +18,12 @@ export class Money implements Expression {
     return isSameAmount && isSameCurrency;
   }
 
-  public times(multiplier: number) {
+  public times(multiplier: number): Expression {
     return new Money(this._amount * multiplier, this._currency);
   }
 
-  public plus(other: Money) {
-    return new Sum(this, other);
+  public plus(addend: Expression): Expression {
+    return new Sum(this, addend);
   }
 
   public reduce(bank: Bank, to: string) {
