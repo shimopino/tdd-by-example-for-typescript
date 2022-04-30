@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import { Bank } from './Bank';
 import { Money } from './Money';
 
 describe('多国籍通貨の計算', () => {
@@ -38,8 +39,11 @@ describe('多国籍通貨の計算', () => {
   });
 
   it('同じ通貨単位での足し算を行う', () => {
-    const sum = Money.dollar(5).plus(Money.dollar(5));
+    const five = Money.dollar(5);
+    const sum = five.plus(five);
+    const bank = new Bank();
+    const reduced = bank.reduce(sum, 'USD');
 
-    expect(sum).toEqual(Money.dollar(10));
+    expect(reduced).toEqual(Money.dollar(10));
   });
 });

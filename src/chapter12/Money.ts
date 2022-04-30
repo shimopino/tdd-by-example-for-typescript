@@ -1,4 +1,6 @@
-export class Money {
+import { Expression } from './Expression';
+
+export class Money implements Expression {
   protected _amount: number;
   protected _currency: string;
 
@@ -18,7 +20,7 @@ export class Money {
     return new Money(this._amount * multiplier, this._currency);
   }
 
-  public plus(other: Money) {
+  public plus(other: Money): Expression {
     return new Money(this._amount + other._amount, this._currency);
   }
 
