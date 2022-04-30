@@ -1,3 +1,4 @@
+import { Bank } from './Bank';
 import { Expression } from './Expression';
 import { Money } from './Money';
 
@@ -10,7 +11,7 @@ export class Sum implements Expression {
     this.addend = addend;
   }
 
-  public reduce(to: string) {
+  public reduce(bank: Bank, to: string) {
     // @ts-expect-error Javaとはパッケージの概念が異なるため
     const amount = this.augend._amount + this.addend._amount;
     return new Money(amount, to);
