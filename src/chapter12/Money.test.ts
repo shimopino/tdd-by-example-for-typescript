@@ -14,10 +14,6 @@ describe('多国籍通貨の計算', () => {
     expect(five.times(3)).toEqual(Money.dollar(15));
   });
 
-  it.skip('[↑で完了] amountをprivateにする');
-
-  it.todo('Dollarの副作用をどのように取り扱うのか？');
-
   it.todo('Moneyの丸め処理をどうするのか？');
 
   it('値が同じ場合は等しいと判断される', () => {
@@ -31,14 +27,12 @@ describe('多国籍通貨の計算', () => {
 
   it.todo('nullとの等価性比較');
 
-  it.todo('他のオブジェクトとの等価性比較');
-
   it('通過の概念を導入する', () => {
     expect(Money.dollar(1).currency()).toBe('USD');
     expect(Money.franc(1).currency()).toBe('CHF');
   });
 
-  it('同じ通貨単位での足し算を行う', () => {
+  it('同じ通貨単位での足し算（$5 + $5 = $10）を行う', () => {
     const five = Money.dollar(5);
     const sum = five.plus(five);
     const bank = new Bank();
@@ -46,4 +40,6 @@ describe('多国籍通貨の計算', () => {
 
     expect(reduced).toEqual(Money.dollar(10));
   });
+
+  it.todo('異なる通貨単位での足し算（$5 + 10 CHF = $10）を行う');
 });
