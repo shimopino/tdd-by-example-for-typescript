@@ -22,7 +22,9 @@ describe('多国籍通貨の計算', () => {
 
   it.todo('Moneyの丸め処理をどうするのか？');
 
-  it.todo('値が同じ場合は等しいと判断される');
+  it('値が同じ場合は等しいと判断される', () => {
+    expect(new Dollar(5).equals(new Dollar(5))).toBeTruthy();
+  });
 
   it.todo('Dollarオブジェクトをハッシュテーブルのキーとして取り扱う');
 });
