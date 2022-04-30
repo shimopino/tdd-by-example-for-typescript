@@ -36,4 +36,10 @@ describe('多国籍通貨の計算', () => {
     expect(Money.dollar(1).currency()).toBe('USD');
     expect(Money.franc(1).currency()).toBe('CHF');
   });
+
+  it('同じ通貨単位での足し算を行う', () => {
+    const sum = Money.dollar(5).plus(Money.dollar(5));
+
+    expect(sum).toEqual(Money.dollar(10));
+  });
 });
