@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { Franc } from './Franc';
 import { Dollar } from './Dollar';
+import { Franc } from './Franc';
 
 describe('多国籍通貨の計算', () => {
   it.todo(
@@ -27,6 +27,8 @@ describe('多国籍通貨の計算', () => {
 
     expect(new Franc(5).equals(new Franc(5))).toBeTruthy();
     expect(new Franc(5).equals(new Franc(6))).toBeFalsy();
+
+    expect(new Franc(5).equals(new Dollar(5))).toBeFalsy();
   });
 
   it.todo('Dollarオブジェクトをハッシュテーブルのキーとして取り扱う');
