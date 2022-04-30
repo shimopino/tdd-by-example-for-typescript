@@ -58,5 +58,12 @@ describe('多国籍通貨の計算', () => {
     expect(result).toEqual(Money.dollar(7));
   });
 
+  it('reduceがMoneyを受け取ることができる', () => {
+    const bank = new Bank();
+    const result = bank.reduce(Money.dollar(1), 'USD');
+
+    expect(result).toEqual(Money.dollar(1));
+  });
+
   it.todo('異なる通貨単位での足し算（$5 + 10 CHF = $10）を行う');
 });
