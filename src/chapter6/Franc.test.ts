@@ -9,4 +9,10 @@ describe('多国籍通貨の計算', () => {
 
     expect(five.times(3)).toEqual(new Franc(15));
   });
+
+  it('値が同じ場合は等しいと判断される', () => {
+    expect(new Franc(5).equals(new Franc(5))).toBeTruthy();
+
+    expect(new Franc(5).equals(new Franc(6))).toBeFalsy();
+  });
 });
