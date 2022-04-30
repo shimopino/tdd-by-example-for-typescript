@@ -33,5 +33,8 @@ describe.skip('多国籍通貨の計算', () => {
 
   it.todo('他のオブジェクトとの等価性比較');
 
-  it.todo('通過の概念を導入する');
+  it('通過の概念を導入する', () => {
+    // expect(Money.dollar(1).getCurrency()).toBe('USD');
+    // expect(Money.franc(1).getCurrency()).toBe('CHF');
+  });
 });
