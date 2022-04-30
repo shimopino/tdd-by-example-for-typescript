@@ -1,6 +1,3 @@
-import { Dollar } from './Dollar';
-import { Franc } from './Franc';
-
 export class Money {
   protected amount: number;
   protected currency: string;
@@ -12,7 +9,6 @@ export class Money {
 
   public equals(other: Money) {
     const isSameAmount = this.amount === other.amount;
-    // const isSameClass = this.constructor.name === other.constructor.name;
     const isSameCurrency = this.currency === other.currency;
 
     return isSameAmount && isSameCurrency;
@@ -27,10 +23,10 @@ export class Money {
   }
 
   public static dollar(amount: number): Money {
-    return new Dollar(amount, 'USD');
+    return new Money(amount, 'USD');
   }
 
   public static franc(amount: number): Money {
-    return new Franc(amount, 'CHF');
+    return new Money(amount, 'CHF');
   }
 }
