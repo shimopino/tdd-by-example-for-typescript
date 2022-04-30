@@ -10,6 +10,6 @@ export class Dollar {
   }
 
   public equals(other: Dollar) {
-    return true;
+    return this.amount === other.amount;
   }
 }

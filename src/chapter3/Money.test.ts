@@ -24,6 +24,8 @@ describe('多国籍通貨の計算', () => {
 
   it('値が同じ場合は等しいと判断される', () => {
     expect(new Dollar(5).equals(new Dollar(5))).toBeTruthy();
+
+    expect(new Dollar(5).equals(new Dollar(6))).toBeFalsy();
   });
 
   it.todo('Dollarオブジェクトをハッシュテーブルのキーとして取り扱う');
