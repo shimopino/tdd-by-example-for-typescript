@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { Dollar } from './Money';
+import { Dollar } from './Dollar';
 
 describe('多国籍通貨の計算', () => {
   it.todo(
