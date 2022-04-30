@@ -66,4 +66,12 @@ describe('多国籍通貨の計算', () => {
   });
 
   it.todo('異なる通貨単位での足し算（$5 + 10 CHF = $10）を行う');
+
+  it('為替レートを設定して通貨を変換する', () => {
+    const bank = new Bank();
+    bank.addRate('CHF', 'USD', 2);
+    const result = bank.reduce(Money.franc(2), 'USD');
+
+    expect(result).toEqual(Money.dollar(1));
+  });
 });
