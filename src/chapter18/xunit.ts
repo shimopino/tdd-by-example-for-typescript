@@ -6,8 +6,9 @@ class TestCase {
   }
 
   public run() {
-    // @ts-expect-error 動的な getattr の方法がわからないのでベタ書きする
-    this.testMethod();
+    // Pythonの getattr と同じことを実現するために危険な eval をあえて使用する
+    const method = `this.${this.name}()`;
+    eval(method);
   }
 }
 
@@ -25,7 +26,7 @@ class WasRun extends TestCase {
 }
 
 class TestCaseTest extends TestCase {
-  public testMethod() {
+  public testRunning() {
     const test = new WasRun('testMethod');
     console.assert(test.wasRun === 0);
     test.run();
@@ -34,3 +35,5 @@ class TestCaseTest extends TestCase {
 }
 
 new TestCaseTest('testRunning').run();
+
+export {};
