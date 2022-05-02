@@ -17,3 +17,5 @@
 ## 参考リンク
 
 - [いろいろな .config.js で型の補完を効かせる方法まとめ](https://zenn.dev/jay_es/articles/2021-04-22-config-js)
+- [TDD Boot Camp 2020 Online #1 基調講演/ライブコーディング](https://youtu.be/Q-FJ3XmFlT8?t=1146)
+- [テストコードのリファクタリングが目指すもの](https://youtu.be/AKCfYuDhvXM?t=3380)
