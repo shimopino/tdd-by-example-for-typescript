@@ -14,6 +14,12 @@
   - 同じファイル内にクラスを配置すれば解決するが、一旦このままにしておく
     - `npx tsc src/chapter10/*.ts` で出力したコードを解析すれば原因はわかる
 
+## 次にやること
+
+- 個人でアプリを開発するときに TDD を実践してみる
+- Kata に載っている題材を使って TDD を実践してみる
+  - [Katas to learn TDD](https://kata-log.rocks/tdd)
+
 ## 参考リンク
 
 - [いろいろな .config.js で型の補完を効かせる方法まとめ](https://zenn.dev/jay_es/articles/2021-04-22-config-js)
