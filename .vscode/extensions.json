@@ -2,6 +2,7 @@
   "recommendations": [
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
-    "patbenatar.advanced-new-file"
+    "patbenatar.advanced-new-file",
+    "usernamehw.errorlens"
   ]
 }
