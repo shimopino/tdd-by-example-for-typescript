@@ -12,7 +12,8 @@
     "coverage": "vitest run --coverage",
     "chapter18": "ts-node-dev --respawn src/chapter18/xunit.ts",
     "chapter19": "ts-node-dev --respawn src/chapter19/xunit.ts",
-    "chapter20": "ts-node-dev --respawn src/chapter20/xunit.ts"
+    "chapter20": "ts-node-dev --respawn src/chapter20/xunit.ts",
+    "chapter21": "ts-node-dev --respawn src/chapter21/xunit.ts"
   },
   "devDependencies": {
     "@types/node": "^17.0.31",
