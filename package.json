@@ -14,7 +14,8 @@
     "chapter19": "ts-node-dev --respawn src/chapter19/xunit.ts",
     "chapter20": "ts-node-dev --respawn src/chapter20/xunit.ts",
     "chapter21": "ts-node-dev --respawn src/chapter21/xunit.ts",
-    "chapter22": "ts-node-dev --respawn src/chapter22/xunit.ts"
+    "chapter22": "ts-node-dev --respawn src/chapter22/xunit.ts",
+    "chapter23": "ts-node-dev --respawn src/chapter23/xunit.ts"
   },
   "devDependencies": {
     "@types/node": "^17.0.31",
