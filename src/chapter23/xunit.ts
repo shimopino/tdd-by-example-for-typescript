@@ -14,16 +14,17 @@ class TestCase {
   public run(result: TestResult) {
     result.testStarted();
 
+    this.setUp();
+
     try {
-      this.setUp();
       // Pythonの getattr と同じことを実現するために危険な eval をあえて使用する
       const method = `this.${this.name}()`;
       eval(method);
     } catch (err) {
       result.testFailed();
-    } finally {
-      this.tearDown();
     }
+
+    this.tearDown();
   }
 }
 
