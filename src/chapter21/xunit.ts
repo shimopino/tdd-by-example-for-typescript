@@ -7,10 +7,8 @@ class TestCase {
     this.name = name;
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
   public setUp() {}
 
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
   public tearDown() {}
 
   public run() {
