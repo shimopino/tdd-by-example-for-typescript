@@ -1,3 +1,5 @@
+import * as assert from 'assert';
+
 class TestCase {
   public name: string;
 
@@ -28,9 +30,9 @@ class WasRun extends TestCase {
 class TestCaseTest extends TestCase {
   public testRunning() {
     const test = new WasRun('testMethod');
-    console.assert(test.wasRun === 0);
+    assert.equal(test.wasRun, 0);
     test.run();
-    console.assert(test.wasRun === 0);
+    assert.equal(test.wasRun, 0);
   }
 }
 

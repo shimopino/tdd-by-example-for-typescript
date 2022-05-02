@@ -1,3 +1,5 @@
+import * as assert from 'assert';
+
 class TestCase {
   public name: string;
 
@@ -47,12 +49,12 @@ class TestCaseTest extends TestCase {
 
   public testRunning() {
     this.test.run();
-    console.assert(this.test.wasRun === 1);
+    assert.equal(this.test.wasRun, 1);
   }
 
   public testSetUp() {
     this.test.run();
-    console.assert(this.test.wasSetUp === 1);
+    assert.equal(this.test.wasSetUp, 1);
   }
 }
 
