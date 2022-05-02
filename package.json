@@ -10,7 +10,8 @@
     "test": "vitest",
     "watch": "vitest watch",
     "coverage": "vitest run --coverage",
-    "chapter18": "ts-node-dev --respawn src/chapter18/xunit.ts"
+    "chapter18": "ts-node-dev --respawn src/chapter18/xunit.ts",
+    "chapter19": "ts-node-dev --respawn src/chapter19/xunit.ts"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.21.0",
