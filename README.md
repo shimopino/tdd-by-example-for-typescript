@@ -19,6 +19,7 @@
 - 個人でアプリを開発するときに TDD を実践してみる
 - Kata に載っている題材を使って TDD を実践してみる
   - [Katas to learn TDD](https://kata-log.rocks/tdd)
+  - [テスト駆動開発の題材を目的別で紹介する](https://nihonbuson.hatenadiary.jp/entry/2021/08/16/090000#%E3%83%AC%E3%82%AC%E3%82%B7%E3%83%BC%E3%82%B3%E3%83%BC%E3%83%89%E3%81%AE%E3%83%AA%E3%83%95%E3%82%A1%E3%82%AF%E3%82%BF%E3%83%AA%E3%83%B3%E3%82%B0%E3%81%AE%E5%95%8F%E9%A1%8C)
 
 ## 参考リンク
 
